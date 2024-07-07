@@ -1,0 +1,12 @@
+node_modules
+.log
+Dockerfile
+docker-compose.yml
+build
+.myenv
+.log
+.env
+Dockerfile
+docker-compose.yml
+__pycache__
+*.pyc
