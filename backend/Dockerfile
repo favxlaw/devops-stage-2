@@ -1,18 +1,17 @@
-FROM python:3.10-slim
+FROM python:3.11
 
-ENV PYTHONBUFFERED=1
-ENV POETRY_VERSION=1.5.1
 
-RUN pip install "poetry==$POETRY_VERSION"
+RUN pip install poetry
 
-WORKDIR /app
+WORKDIR /application
 
-COPY pyproject.toml poetry.lock* /app/
+COPY pyproject.toml poetry.lock ./
 
-RUN poetry install --no-root --no-dev
+RUN poetry install --no-root 
 
 COPY . .
 
-EXPOSE 8000
+ENV PYTHONPATH=/application
 
-CMD ["poetry", "run", "uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD poetry run bash ./prestart.sh; poetry run uvicorn app.main:app --hosy 0.0.0.
+
