@@ -1,20 +1,21 @@
-# Full-Stack FastAPI and React Template
+# Dockerized Full Stack Web Application Deployment
 
-Welcome to the Full-Stack FastAPI and React template repository. This repository serves as a demo application for interns, showcasing how to set up and run a full-stack application with a FastAPI backend and a ReactJS frontend using ChakraUI.
+This project demonstrates the deployment of a full-stack web application using Docker containers. The application consists of a React frontend, a FastAPI backend, and a PostgreSQL database. NGNIX is used as a reverse proxy to manage the routing of the frontend and backend services.
 
-## Project Structure
+## Prerequisites
 
-The repository is organized into two main directories:
+- Docker
+- Docker Compose
 
-- **frontend**: Contains the ReactJS application.
-- **backend**: Contains the FastAPI application and PostgreSQL database integration.
-
-Each directory has its own README file with detailed instructions specific to that part of the application.
 
 ## Getting Started
 
-To get started with this template, please follow the instructions in the respective directories:
+### 1. Fork and Clone the Repository
 
-- [Frontend README](./frontend/README.md)
-- [Backend README](./backend/README.md)
+Fork this repository to your own GitHub account, then clone it to your local machine.
+
+```sh
+git clone https://github.com/your-username/your-repo.git
+cd your-repo
+
 
