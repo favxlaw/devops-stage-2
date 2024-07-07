@@ -20,13 +20,16 @@ services:
       - "8000:8000"
     environment:
       - POSTGRES_SERVER=db
-        POSTGRES_PORT=5432
-        POSTGRES_DB=my-app
-        POSTGRES_USER=favxlaw
-        POSTGRES_PASSWORD=favxlaw24
-        FIRST_SUPERUSER=favxlaw@gmail.com
-        FIRST_SUPERUSER_PASSWORD=favxlaw23
-        PROJECT_NAME=hng-project
+      - POSTGRES_PORT=5432
+      - POSTGRES_DB=my-app
+      - POSTGRES_USER=favxlaw
+      - POSTGRES_PASSWORD=favxlaw24
+      - FIRST_SUPERUSER=favxlaw@gmail.com
+      - FIRST_SUPERUSER_PASSWORD=favxlaw23
+      - PROJECT_NAME=hng-project
+      - BACKEND_CORS_ORIGINS="http://localhost,http://localhost:5173,https://localhost,https://localhost:5173"
+      - SECRET_KEY=changethis123
+      - USERS_OPEN_REGISTRATION=True
     depends_on:
       - db
 
