@@ -13,5 +13,5 @@ COPY . .
 
 ENV PYTHONPATH=/application
 
-CMD poetry run bash ./prestart.sh; poetry run uvicorn app.main:app --hosy 0.0.0.
+CMD poetry run bash ./prestart.sh; poetry run uvicorn app.main:app --host 0.0.0.0
 
