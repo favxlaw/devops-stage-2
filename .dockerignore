@@ -5,7 +5,6 @@ docker-compose.yml
 build
 .myenv
 .log
-.env
 Dockerfile
 docker-compose.yml
 __pycache__
