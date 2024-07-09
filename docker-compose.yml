@@ -52,10 +52,7 @@ services:
     restart: always
     ports:
       - '8090:81'
-      # - '80:80'
       - '443:443'
-    # environment:
-    #   DB_SQLITE_FILE: "/data/db.sqlite"
     volumes:
       - ./proxy/data:/data
       - ./proxy/letsencrypt:/etc/letsencrypt
